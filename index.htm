@@ -54,6 +54,22 @@
         .animate-spin-slow {
             animation: spin-slow 60s linear infinite;
         }
+
+        /* Modal Animation */
+        @keyframes modal-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-modal-in {
+            animation: modal-in 0.2s ease-out;
+        }
     </style>
 </head>
 
@@ -118,7 +134,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4" id="hero-downloads">
-                    <a id="btn-win-hero" href="downloads/DiskLens-1.0.28-win-x64.exe"
+                    <a id="btn-win-hero" href="downloads/DiskLens-1.0.28-win-x64.exe" onclick="setTimeout(showWinModal, 100)"
                         class="download-btn flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl transition-all hover:translate-y-[-2px] font-semibold">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
@@ -126,7 +142,7 @@
                         Download for Windows
                         <span class="text-slate-400 text-xs font-normal">(x64)</span>
                     </a>
-                    <a id="btn-mac-hero" href="downloads/DiskLens-1.0.28-mac-arm64.dmg"
+                    <a id="btn-mac-hero" href="downloads/DiskLens-1.0.28-mac-arm64.dmg" onclick="setTimeout(showMacModal, 100)"
                         class="download-btn flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl transition-all hover:translate-y-[-2px] font-semibold">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -353,14 +369,14 @@
                 Join thousands of users who have cleaned up terabytes of data. Free to try, easy to love.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4" id="cta-downloads">
-                <a id="btn-mac-cta" href="downloads/DiskLens-1.0.28-mac-arm64.dmg"
+                <a id="btn-mac-cta" href="downloads/DiskLens-1.0.28-mac-arm64.dmg" onclick="setTimeout(showMacModal, 100)"
                     class="download-btn px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.3 0 2.55.87 3.35.87.8 0 2.3-.9 3.86-.86 1.3.05 3 .53 3.82 1.55-.1.06-2.28 1.32-2.26 3.92.02 3.12 2.73 4.16 2.75 4.17-.02.06-.42 1.46-1.63 3.15zM12.98 4.54c.71-.85 1.18-2.06 1.05-3.27-1.02.04-2.25.68-2.98 1.54-.67.79-1.22 2.05-1.07 3.23 1.13.09 2.29-.64 3-1.5z"/>
                     </svg>
                     Download for Mac
                 </a>
-                <a id="btn-win-cta" href="downloads/DiskLens-1.0.28-win-x64.exe"
+                <a id="btn-win-cta" href="downloads/DiskLens-1.0.28-win-x64.exe" onclick="setTimeout(showWinModal, 100)"
                     class="download-btn px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
@@ -394,6 +410,135 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mac Gatekeeper Warning Modal -->
+    <div id="mac-warning-modal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeMacModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="glass-panel rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-modal-in">
+                <!-- Close Button -->
+                <button onclick="closeMacModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <!-- Warning Icon -->
+                <div class="w-16 h-16 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    </svg>
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white text-center mb-2">
+                    Important: macOS Security Notice
+                </h3>
+
+                <!-- Explanation -->
+                <p class="text-slate-300 text-center text-sm mb-6">
+                    Since DiskLens isn't signed with an Apple Developer certificate, macOS may show a
+                    <span class="text-amber-400 font-medium">"damaged and can't be opened"</span> warning.
+                </p>
+
+                <!-- Fix Instructions -->
+                <div class="bg-slate-800/50 rounded-xl p-4 mb-4">
+                    <p class="text-slate-300 text-sm mb-3">
+                        To fix this, open <span class="text-violet-400 font-medium">Terminal</span> and run:
+                    </p>
+
+                    <!-- Command Box -->
+                    <div class="flex items-center gap-2 bg-slate-900 rounded-lg p-3 font-mono text-sm">
+                        <code id="quarantine-cmd" class="text-teal-400 flex-1 overflow-x-auto whitespace-nowrap">xattr -d com.apple.quarantine /Applications/DiskLens.app</code>
+                        <button onclick="copyCommand()" id="copy-btn" class="flex-shrink-0 p-2 hover:bg-slate-700 rounded-lg transition-colors" title="Copy to clipboard">
+                            <svg id="copy-icon" class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            <svg id="check-icon" class="w-5 h-5 text-teal-400 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Help Link -->
+                <p class="text-slate-500 text-xs text-center">
+                    <a href="faq.html#gatekeeper" class="text-violet-400 hover:underline">Learn more</a> about macOS Gatekeeper
+                </p>
+
+                <!-- Close Button -->
+                <button onclick="closeMacModal()" class="mt-6 w-full py-3 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-semibold transition-colors">
+                    Got it
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Windows SmartScreen Warning Modal -->
+    <div id="win-warning-modal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeWinModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="glass-panel rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-modal-in">
+                <!-- Close Button -->
+                <button onclick="closeWinModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <!-- Warning Icon -->
+                <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white text-center mb-2">
+                    Important: Windows Security Notice
+                </h3>
+
+                <!-- Explanation -->
+                <p class="text-slate-300 text-center text-sm mb-6">
+                    Since DiskLens isn't signed with a Microsoft certificate, Windows SmartScreen may show a
+                    <span class="text-blue-400 font-medium">"Windows protected your PC"</span> warning.
+                </p>
+
+                <!-- Fix Instructions -->
+                <div class="bg-slate-800/50 rounded-xl p-4 mb-4">
+                    <p class="text-slate-300 text-sm mb-4">To run DiskLens, follow these steps:</p>
+
+                    <!-- Step 1 -->
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                        <p class="text-slate-300 text-sm">Click <span class="text-blue-400 font-medium">"More info"</span> on the SmartScreen popup</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                        <p class="text-slate-300 text-sm">Click <span class="text-blue-400 font-medium">"Run anyway"</span> to start the installer</p>
+                    </div>
+                </div>
+
+                <!-- Help Link -->
+                <p class="text-slate-500 text-xs text-center">
+                    <a href="faq.html#smartscreen" class="text-violet-400 hover:underline">Learn more</a> about Windows SmartScreen
+                </p>
+
+                <!-- Close Button -->
+                <button onclick="closeWinModal()" class="mt-6 w-full py-3 bg-violet-600 hover:bg-violet-500 text-white rounded-xl font-semibold transition-colors">
+                    Got it
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- OS Detection Script -->
     <script>
@@ -458,6 +603,58 @@
                 highlightButton('btn-win-cta', false);
             }
         })();
+    </script>
+
+    <!-- Modal Functions -->
+    <script>
+        // Mac Warning Modal Functions
+        function showMacModal() {
+            const modal = document.getElementById('mac-warning-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMacModal() {
+            const modal = document.getElementById('mac-warning-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function copyCommand() {
+            const cmd = document.getElementById('quarantine-cmd').textContent.trim();
+            navigator.clipboard.writeText(cmd).then(() => {
+                // Show check icon
+                document.getElementById('copy-icon').classList.add('hidden');
+                document.getElementById('check-icon').classList.remove('hidden');
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    document.getElementById('copy-icon').classList.remove('hidden');
+                    document.getElementById('check-icon').classList.add('hidden');
+                }, 2000);
+            });
+        }
+
+        // Windows Warning Modal Functions
+        function showWinModal() {
+            const modal = document.getElementById('win-warning-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeWinModal() {
+            const modal = document.getElementById('win-warning-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMacModal();
+                closeWinModal();
+            }
+        });
     </script>
 
 </body>
