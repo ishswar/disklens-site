@@ -1,0 +1,10 @@
+# Ignore large binary files (upload to server separately)
+*.dmg
+*.exe
+*.zip
+*.pkg
+*.msi
+
+# Keep this file and README
+!.gitignore
+!README.md
