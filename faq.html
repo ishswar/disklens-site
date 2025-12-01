@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DiskLens</title>
+    <meta name="description" content="Frequently asked questions about DiskLens disk space analyzer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        details summary { cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] .chevron { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-[#0f172a]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.htm" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/><path d="M12 2v20"/>
+                </svg>
+                <span class="text-xl font-bold text-white">Disk<span class="text-violet-400">Lens</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.htm#features" class="hover:text-white transition-colors">Features</a>
+                <a href="changelog.html" class="hover:text-white transition-colors">Changelog</a>
+                <a href="index.htm#download" class="px-5 py-2.5 bg-white text-slate-900 rounded-full hover:bg-slate-100 transition-all font-semibold">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
+            <p class="text-slate-400 mb-8">Find answers to common questions about DiskLens</p>
+
+            <div class="space-y-4">
+                <!-- General -->
+                <div class="glass-panel rounded-2xl p-6">
+                    <h2 class="text-lg font-semibold text-violet-400 mb-4">General</h2>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>What is DiskLens?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            DiskLens is a cross-platform disk space analyzer that helps you visualize what's taking up space on your computer. It provides interactive charts including pie, donut, radial, and sunburst views to help you identify large files and folders.
+                        </p>
+                    </details>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Is DiskLens free?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            Yes, DiskLens is completely free to use for personal and commercial purposes.
+                        </p>
+                    </details>
+
+                    <details class="group">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>What platforms does DiskLens support?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            DiskLens is available for macOS (Apple Silicon and Intel) and Windows (64-bit). Linux support is planned for a future release.
+                        </p>
+                    </details>
+                </div>
+
+                <!-- Privacy & Security -->
+                <div class="glass-panel rounded-2xl p-6">
+                    <h2 class="text-lg font-semibold text-violet-400 mb-4">Privacy & Security</h2>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Does DiskLens collect my data?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            No. DiskLens operates entirely locally on your computer. No file information, personal data, or usage analytics are ever sent to our servers or any third parties.
+                        </p>
+                    </details>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Does DiskLens read my file contents?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            No. DiskLens only reads file metadata (name, size, modification date) to calculate disk usage. It never opens or reads the actual contents of your files.
+                        </p>
+                    </details>
+
+                    <details class="group">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Is it safe to delete files using DiskLens?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            DiskLens moves files to your system's Trash/Recycle Bin, so you can recover them if needed. However, we recommend backing up important data before deleting files, as emptying the Trash is permanent.
+                        </p>
+                    </details>
+                </div>
+
+                <!-- Usage -->
+                <div class="glass-panel rounded-2xl p-6">
+                    <h2 class="text-lg font-semibold text-violet-400 mb-4">Usage</h2>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>How do I scan a folder?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            Click the "Select Folder" button or use File → Open Folder (Cmd/Ctrl+O). Choose the folder you want to analyze, and DiskLens will scan it and display the results in an interactive chart.
+                        </p>
+                    </details>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Why is scanning slow on some drives?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            Scanning speed depends on your drive type (SSD vs HDD), the number of files, and system load. DiskLens automatically detects your drive type and uses the optimal scanning strategy. HDDs are typically slower due to mechanical seek times.
+                        </p>
+                    </details>
+
+                    <details class="group">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Can I export the analysis results?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            Yes! You can export charts as PNG images with watermark and captions, and export detailed reports in various formats. Use the export button in the toolbar or go to File → Export.
+                        </p>
+                    </details>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="glass-panel rounded-2xl p-6">
+                    <h2 class="text-lg font-semibold text-violet-400 mb-4">Troubleshooting</h2>
+
+                    <details class="group mb-4">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>Why can't I scan certain folders?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            Some system folders require elevated permissions. On macOS, you may need to grant Full Disk Access in System Preferences → Privacy & Security → Full Disk Access. On Windows, try running DiskLens as Administrator.
+                        </p>
+                    </details>
+
+                    <details class="group">
+                        <summary class="flex items-center justify-between py-3 text-white font-medium">
+                            <span>The app is running slowly. What can I do?</span>
+                            <svg class="chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <p class="text-slate-300 pb-3">
+                            For very large directories (100k+ files), try using the Pie or Donut chart views instead of Sunburst, as they render faster. You can also increase the "minimum file size" filter to reduce the number of displayed items.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-bold text-lg">Disk<span class="text-violet-400">Lens</span></span>
+            <div class="flex gap-8 text-sm text-slate-400">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="support.html" class="hover:text-white transition-colors">Support</a>
+                <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="text-slate-600 text-sm">&copy; 2025 DiskLens</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "version": "1.0.18",
+  "releaseDate": "2025-11-30",
+  "releaseNotes": "PNG export improvements, UI enhancements, and performance optimizations.",
+  "downloads": {
+    "mac-arm64": {
+      "url": "https://disklens.app/downloads/DiskLens-1.0.18-mac-arm64.dmg",
+      "filename": "DiskLens-1.0.18-mac-arm64.dmg",
+      "size": null
+    },
+    "mac-x64": {
+      "url": "https://disklens.app/downloads/DiskLens-1.0.18-mac-x64.dmg",
+      "filename": "DiskLens-1.0.18-mac-x64.dmg",
+      "size": null
+    },
+    "win-x64": {
+      "url": "https://disklens.app/downloads/DiskLens-1.0.18-win-x64.exe",
+      "filename": "DiskLens-1.0.18-win-x64.exe",
+      "size": null
+    }
+  },
+  "minimumVersion": "1.0.0",
+  "changelog": [
+    {
+      "version": "1.0.18",
+      "date": "2025-11-30",
+      "changes": [
+        "Added PNG export with watermark and caption",
+        "Fixed legend clipping in exports",
+        "Improved export progress indicator",
+        "Added Show/Hide Details button with icons",
+        "UI polish and performance improvements"
+      ]
+    },
+    {
+      "version": "1.0.17",
+      "date": "2025-11-29",
+      "changes": [
+        "Added floating toolbar for chart controls",
+        "Theme-aware toolbar styling",
+        "Responsive legend positioning"
+      ]
+    }
+  ]
+}

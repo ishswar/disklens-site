@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - DiskLens</title>
+    <meta name="description" content="Get help and support for DiskLens disk space analyzer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-[#0f172a]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.htm" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/><path d="M12 2v20"/>
+                </svg>
+                <span class="text-xl font-bold text-white">Disk<span class="text-violet-400">Lens</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.htm#features" class="hover:text-white transition-colors">Features</a>
+                <a href="changelog.html" class="hover:text-white transition-colors">Changelog</a>
+                <a href="index.htm#download" class="px-5 py-2.5 bg-white text-slate-900 rounded-full hover:bg-slate-100 transition-all font-semibold">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl font-bold mb-4">Support</h1>
+            <p class="text-slate-400 mb-8">We're here to help you get the most out of DiskLens</p>
+
+            <div class="grid gap-6">
+                <!-- Quick Links -->
+                <div class="glass-panel rounded-2xl p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">Quick Links</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="faq.html" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-white">FAQ</h3>
+                                <p class="text-sm text-slate-400">Common questions answered</p>
+                            </div>
+                        </a>
+                        <a href="changelog.html" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-white">Changelog</h3>
+                                <p class="text-sm text-slate-400">Latest updates and fixes</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report an Issue -->
+                <div class="glass-panel rounded-2xl p-8">
+                    <h2 class="text-xl font-semibold text-white mb-4">Report an Issue</h2>
+                    <p class="text-slate-300 mb-6">
+                        Found a bug or have a feature request? Let us know on GitHub. Please include:
+                    </p>
+                    <ul class="list-disc list-inside text-slate-300 space-y-2 mb-6">
+                        <li>Your operating system and version</li>
+                        <li>DiskLens version (Help → About)</li>
+                        <li>Steps to reproduce the issue</li>
+                        <li>Screenshots if applicable</li>
+                    </ul>
+                    <a href="https://github.com/disklens/disklens/issues" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg text-white font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Open GitHub Issues
+                    </a>
+                </div>
+
+                <!-- Contact -->
+                <div class="glass-panel rounded-2xl p-8">
+                    <h2 class="text-xl font-semibold text-white mb-4">Contact Us</h2>
+                    <p class="text-slate-300 mb-6">
+                        For general inquiries, business partnerships, or press requests:
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:support@disklens.app" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <span>support@disklens.app</span>
+                        </a>
+                        <a href="https://twitter.com/disklensapp" target="_blank" rel="noopener" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-violet-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </div>
+                            <span>@disklensapp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- System Requirements -->
+                <div class="glass-panel rounded-2xl p-8">
+                    <h2 class="text-xl font-semibold text-white mb-4">System Requirements</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-medium text-violet-400 mb-3">macOS</h3>
+                            <ul class="text-slate-300 space-y-2">
+                                <li>• macOS 10.15 (Catalina) or later</li>
+                                <li>• Apple Silicon (M1/M2/M3) or Intel</li>
+                                <li>• 100 MB free disk space</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-violet-400 mb-3">Windows</h3>
+                            <ul class="text-slate-300 space-y-2">
+                                <li>• Windows 10 or later (64-bit)</li>
+                                <li>• 100 MB free disk space</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-bold text-lg">Disk<span class="text-violet-400">Lens</span></span>
+            <div class="flex gap-8 text-sm text-slate-400">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="support.html" class="hover:text-white transition-colors">Support</a>
+                <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="text-slate-600 text-sm">&copy; 2025 DiskLens</div>
+        </div>
+    </footer>
+</body>
+</html>
