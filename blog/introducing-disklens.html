@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing DiskLens: A Modern Disk Analyzer Born from a Classic - DiskLens Blog</title>
+    <meta name="description" content="The story of how JDiskReport inspired DiskLens - a modern disk space analyzer built in just 3 days.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; }
+        .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-[#0f172a]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.htm" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/><path d="M12 2v20"/>
+                </svg>
+                <span class="text-xl font-bold text-white">Disk<span class="text-violet-400">Lens</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="../index.htm#features" class="hover:text-white transition-colors">Features</a>
+                <a href="../blog.html" class="text-white">Blog</a>
+                <a href="../changelog.html" class="hover:text-white transition-colors">Changelog</a>
+                <a href="../index.htm#download" class="px-5 py-2.5 bg-white text-slate-900 rounded-full hover:bg-slate-100 transition-all font-semibold">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-32 pb-20 px-6">
+        <article class="max-w-3xl mx-auto">
+            <!-- Breadcrumb -->
+            <div class="mb-8">
+                <a href="../blog.html" class="text-violet-400 hover:text-violet-300 text-sm">&larr; Back to Blog</a>
+            </div>
+
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-xs px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full">Story</span>
+                    <span class="text-slate-500 text-sm">November 30, 2025</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Introducing DiskLens: A Modern Disk Analyzer Born from a Classic</h1>
+                <p class="text-xl text-slate-400">The story of how a beloved Java tool from the 2000s inspired a 3-day coding challenge to create something new.</p>
+            </header>
+
+            <!-- Article Content -->
+            <div class="prose prose-invert max-w-none text-slate-300">
+
+                <p class="text-lg">You know the feeling, right? You get that dreaded "disk full" notification, and you're just staring at your screen thinking... <em>how?</em> Where did it all go?</p>
+
+                <p>You know you have gigabytes of <em>something</em> hiding somewhere, but finding it feels impossible. The built-in tools just don't always cut it.</p>
+
+                <div class="glass-panel rounded-2xl p-8 my-8">
+                    <h3 class="text-xl font-bold text-white mb-4">The Inspiration</h3>
+                    <p class="mb-0">This whole project isn't about reinventing the wheel. It's more of a tribute, really. It's about taking the spirit of a tool that was fantastic for its time and giving it a much-needed modern makeover.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white">The Classic: JDiskReport</h2>
+
+                <p>That classic tool was <strong>JDiskReport</strong>. If you've ever used it, you know it was a workhorse - absolutely solid. But it was built on Java, and on modern computers, it just felt slow. And let's be honest, it looked pretty dated.</p>
+
+                <p>I loved what it did, but I knew there had to be a way to get that same power in a package that was fast, beautiful, and just <em>felt good</em> to use.</p>
+
+                <h2 class="text-2xl font-bold text-white">The 3-Day Challenge</h2>
+
+                <p>So, with that idea in mind, a pretty crazy challenge was set: Could a brand new, fully featured, cross-platform disk analyzer be built from scratch in just <strong>3 days</strong>?</p>
+
+                <p>It sounds a little nuts, but the answer was <em>yes</em>.</p>
+
+                <div class="glass-panel rounded-2xl p-8 my-8 border-l-4 border-violet-500">
+                    <ul class="space-y-3 mb-0">
+                        <li><strong>Day 1:</strong> Basic project up and scanning files</li>
+                        <li><strong>Day 2:</strong> All core visualization modes in place</li>
+                        <li><strong>Day 3:</strong> Polish, pro features, and cross-platform builds</li>
+                    </ul>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white">The Secret: AI-Assisted Development</h2>
+
+                <p>How was this even possible? A huge part of it was using AI coding assistance. They took the project from just a couple of sample images to about 60% of a working application. That initial leap was a game changer.</p>
+
+                <p>Then other tools helped bring it all the way home, creating the stable, high-performance tool we have now.</p>
+
+                <h2 class="text-2xl font-bold text-white">What Came Out</h2>
+
+                <p>DiskLens is a visual disk space analyzer that helps you understand where your storage went. It's:</p>
+
+                <ul class="space-y-2 my-6">
+                    <li class="flex items-start gap-3">
+                        <span class="text-violet-400">✦</span>
+                        <span><strong>Fast</strong> - Smart scanning adapts to your drive type</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-violet-400">✦</span>
+                        <span><strong>Beautiful</strong> - Modern UI with multiple chart types</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-violet-400">✦</span>
+                        <span><strong>Cross-platform</strong> - Works on Mac and Windows</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-violet-400">✦</span>
+                        <span><strong>Private</strong> - 100% local, no data ever leaves your computer</span>
+                    </li>
+                </ul>
+
+                <p>From an old beloved classic came a modern, fast, and beautiful solution to a problem we all have.</p>
+
+                <div class="mt-12 pt-8 border-t border-slate-700">
+                    <p class="text-slate-400 mb-4">Ready to see where your space went?</p>
+                    <a href="../index.htm#download" class="inline-block px-6 py-3 bg-violet-600 text-white rounded-full hover:bg-violet-500 transition-all font-semibold">Download DiskLens Free</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-bold text-lg">Disk<span class="text-violet-400">Lens</span></span>
+            <div class="flex gap-8 text-sm text-slate-400">
+                <a href="../privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="../terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="../support.html" class="hover:text-white transition-colors">Support</a>
+                <a href="../faq.html" class="hover:text-white transition-colors">FAQ</a>
+            </div>
+            <div class="text-slate-600 text-sm">&copy; 2025 DiskLens</div>
+        </div>
+    </footer>
+</body>
+</html>
