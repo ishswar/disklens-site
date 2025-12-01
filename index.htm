@@ -7,6 +7,8 @@
     <title>DiskLens - Visualize Your Storage</title>
     <meta name="description"
         content="The modern disk usage analyzer for Mac and Windows. Visualize your storage, find space hogs, and reclaim your drive.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-32.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -68,13 +70,7 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                 <!-- Logo Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-violet-400" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    <path d="M2 12h20" />
-                    <path d="M12 2v20" />
-                </svg>
+                <img src="logo-32.png" alt="DiskLens" class="h-8 w-8">
                 <span class="text-xl font-bold tracking-tight text-white">Disk<span
                         class="text-violet-400">Lens</span></span>
             </div>
@@ -120,21 +116,17 @@
                     sunburst chart, helping you find and delete space hogs in seconds.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="downloads/DiskLens-1.0.18-win-x64.exe"
-                        class="flex items-center justify-center gap-3 px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white rounded-xl transition-all hover:translate-y-[-2px] hover:shadow-lg hover:shadow-violet-600/25 font-semibold group">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4">
-                            </path>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4" id="hero-downloads">
+                    <a id="btn-win-hero" href="downloads/DiskLens-1.0.18-win-x64.exe"
+                        class="download-btn flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl transition-all hover:translate-y-[-2px] font-semibold">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
                         </svg>
                         Download for Windows
-                        <span
-                            class="text-violet-300 text-xs font-normal opacity-70 group-hover:opacity-100">(x64)</span>
+                        <span class="text-slate-400 text-xs font-normal">(x64)</span>
                     </a>
-                    <a href="downloads/DiskLens-1.0.18-mac-arm64.dmg"
-                        class="flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl transition-all hover:translate-y-[-2px] font-semibold">
+                    <a id="btn-mac-hero" href="downloads/DiskLens-1.0.18-mac-arm64.dmg"
+                        class="download-btn flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl transition-all hover:translate-y-[-2px] font-semibold">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.3 0 2.55.87 3.35.87.8 0 2.3-.9 3.86-.86 1.3.05 3 .53 3.82 1.55-.1.06-2.28 1.32-2.26 3.92.02 3.12 2.73 4.16 2.75 4.17-.02.06-.42 1.46-1.63 3.15zM12.98 4.54c.71-.85 1.18-2.06 1.05-3.27-1.02.04-2.25.68-2.98 1.54-.67.79-1.22 2.05-1.07 3.23 1.13.09 2.29-.64 3-1.5z" />
@@ -359,19 +351,18 @@
             <p class="text-xl text-slate-300 mb-10">
                 Join thousands of users who have cleaned up terabytes of data. Free to try, easy to love.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="downloads/DiskLens-1.0.18-mac-arm64.dmg"
-                    class="px-8 py-4 bg-white text-slate-900 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl shadow-white/10 flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row justify-center gap-4" id="cta-downloads">
+                <a id="btn-mac-cta" href="downloads/DiskLens-1.0.18-mac-arm64.dmg"
+                    class="download-btn px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.3 0 2.55.87 3.35.87.8 0 2.3-.9 3.86-.86 1.3.05 3 .53 3.82 1.55-.1.06-2.28 1.32-2.26 3.92.02 3.12 2.73 4.16 2.75 4.17-.02.06-.42 1.46-1.63 3.15zM12.98 4.54c.71-.85 1.18-2.06 1.05-3.27-1.02.04-2.25.68-2.98 1.54-.67.79-1.22 2.05-1.07 3.23 1.13.09 2.29-.64 3-1.5z"/>
                     </svg>
                     Download for Mac
                 </a>
-                <a href="downloads/DiskLens-1.0.18-win-x64.exe"
-                    class="px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                <a id="btn-win-cta" href="downloads/DiskLens-1.0.18-win-x64.exe"
+                    class="download-btn px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
                     </svg>
                     Download for Windows
                 </a>
@@ -386,11 +377,7 @@
     <footer class="border-t border-slate-800 bg-[#0f172a] py-12">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-500" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                </svg>
+                <img src="logo-32.png" alt="DiskLens" class="h-6 w-6">
                 <span class="font-bold text-lg">Disk<span class="text-violet-400">Lens</span></span>
             </div>
 
@@ -406,6 +393,71 @@
             </div>
         </div>
     </footer>
+
+    <!-- OS Detection Script -->
+    <script>
+        (function() {
+            // Detect OS from user agent
+            const ua = navigator.userAgent.toLowerCase();
+            const isMac = ua.includes('mac');
+            const isWindows = ua.includes('win');
+
+            // Highlight styles
+            const primaryStyle = 'bg-violet-600 hover:bg-violet-500 text-white border-violet-600 hover:shadow-lg hover:shadow-violet-600/25';
+            const secondaryStyle = 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700';
+
+            function highlightButton(btnId, isPrimary) {
+                const btn = document.getElementById(btnId);
+                if (!btn) return;
+
+                // Remove existing background classes
+                btn.classList.remove('bg-violet-600', 'hover:bg-violet-500', 'bg-slate-800', 'hover:bg-slate-700',
+                    'border-violet-600', 'hover:shadow-lg', 'hover:shadow-violet-600/25', 'border', 'border-slate-700');
+
+                if (isPrimary) {
+                    btn.classList.add('bg-violet-600', 'hover:bg-violet-500', 'border-violet-600',
+                        'hover:shadow-lg', 'hover:shadow-violet-600/25');
+                } else {
+                    btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'border', 'border-slate-700');
+                }
+            }
+
+            // Reorder buttons based on OS (primary first on mobile, side by side on desktop)
+            function reorderButtons(containerId, primaryBtnId, secondaryBtnId) {
+                const container = document.getElementById(containerId);
+                const primaryBtn = document.getElementById(primaryBtnId);
+                const secondaryBtn = document.getElementById(secondaryBtnId);
+
+                if (container && primaryBtn && secondaryBtn) {
+                    container.insertBefore(primaryBtn, secondaryBtn);
+                }
+            }
+
+            if (isMac) {
+                // Mac user: highlight Mac buttons
+                highlightButton('btn-mac-hero', true);
+                highlightButton('btn-win-hero', false);
+                highlightButton('btn-mac-cta', true);
+                highlightButton('btn-win-cta', false);
+                reorderButtons('hero-downloads', 'btn-mac-hero', 'btn-win-hero');
+                reorderButtons('cta-downloads', 'btn-mac-cta', 'btn-win-cta');
+            } else if (isWindows) {
+                // Windows user: highlight Windows buttons
+                highlightButton('btn-win-hero', true);
+                highlightButton('btn-mac-hero', false);
+                highlightButton('btn-win-cta', true);
+                highlightButton('btn-mac-cta', false);
+                reorderButtons('hero-downloads', 'btn-win-hero', 'btn-mac-hero');
+                reorderButtons('cta-downloads', 'btn-win-cta', 'btn-mac-cta');
+            } else {
+                // Unknown OS: default to Mac primary (more common for design tools)
+                highlightButton('btn-mac-hero', true);
+                highlightButton('btn-win-hero', false);
+                highlightButton('btn-mac-cta', true);
+                highlightButton('btn-win-cta', false);
+            }
+        })();
+    </script>
 
 </body>
 
